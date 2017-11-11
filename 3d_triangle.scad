@@ -31,6 +31,7 @@
 //	Date:		11.09.2011
 //	Edition:	0.3	11.09.2011 For review by Marius
 //	Edition:	0.4	11.11.2011 Ref to GPL2.1 added
+//	Edition:	1.0	11.11.2017 Align to new POLYHEDRON syntax
 //
 // --------------------------------------------------------------------------------------
 //
@@ -217,7 +218,7 @@ function 3dtri_centerOfIn_circle (Acord,Bcord,Ccord,r) =
 module 3dtri_draw ( Acord, Bcord, Ccord, h) {
 polyhedron (points=[Acord,Bcord,Ccord,
 					Acord+[0,0,h],Bcord+[0,0,h],Ccord+[0,0,h]],
-			triangles=[	[0,1,2],[0,2,3],[3,2,5],
+			faces=[	[0,1,2],[0,2,3],[3,2,5],
 					[3,5,4],[1,5,2],[4,5,1],
 					[4,1,0],[0,3,4]]);
 
@@ -271,7 +272,7 @@ top_triangles = [[11,7,6],[11,8,7],[11,10,8],[8,10,9]];
 union () { 
 	polyhedron (points=[p0,p1,p2,p3,p4,p5,
 					p0+[0,0,h],p1+[0,0,h],p2+[0,0,h],p3+[0,0,h],p4+[0,0,h],p5+[0,0,h]],
-			triangles=[	bottom_triangles[0],bottom_triangles[1],bottom_triangles[2],bottom_triangles[3],
+			faces=[	bottom_triangles[0],bottom_triangles[1],bottom_triangles[2],bottom_triangles[3],
 						A_edge_triangles[0],A_edge_triangles[1],
 						c_side_triangles[0],c_side_triangles[1],
 						B_edge_triangles[0],B_edge_triangles[1],
